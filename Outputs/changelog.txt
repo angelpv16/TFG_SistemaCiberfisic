@@ -1,0 +1,244 @@
+# PioSolver 2.x Changelog
+
+# 15.03.2023
+### PioViewer 2.0.7.20
+    - fix in HRC import rescaling feature
+    - small fix in dark mode colors
+
+# 06.02.2023
+### PioViewer 2.0.7.19
+    - fix displayed colors on the grid in dark mode
+    - fix in remembering job settings
+
+# 12.01.2023
+### PioViewer 2.0.7.17
+    - fix in HRC import rescaling feature
+  
+# 28.09.2022
+### PioViewer 2.0.7.16
+    - fix a problem with updating window location too often
+    - HRC Import fixes:
+        - parse numbers in scientific notation
+
+# 31.08.2022
+### PioViewer 2.0.7.14
+    - fix another bug in HRC import
+    - add more customization options to GTO Trainer skins
+
+# 17.07.2022
+### PioViewer 2.0.7.13
+    - fix a bug in HRC import
+
+# 29.04.2022
+### PioViewer 2.0.7.10
+    - fix problem with reading maximum spread from configuration
+
+# 17.02.2022
+
+### PioViewer 2.0.7.9
+    - fix some layout problems related to DPI scaling fixes
+
+# 16.02.2022
+
+### PioSolver 2.0.8
+     - fix a bug with combo-locking on the river
+
+### PioViewer 2.0.7.6
+     - fixed a bug when preflop ranges configs were not loaded properly
+     - fix a bug with forced actions and "play one street" in GTO Trainer
+     - fix a bug with reporting NaN lines in reports
+     - fix a bug with crashes when copy/pasting nodes in preflop Tree building
+     - fixed DPI scaling of some controls
+     - fixed a bug with too restrictive check for pokersites processes running
+
+# 23.11.2021
+
+### PioSolver 2.0.7
+    - improved a check for active pokersites to reduce number of false-positives
+    - increased a size of a IO buffer
+
+### PioViewer 2.0.7.5
+    - GTO Trainer: Add some basic customization options while playing (ability to play the same hand several times, chosing particular hand, runouts, etc..)
+    - improve some error messages including when some files are missing or the solver process has died.
+    - Jobs: Add option to abort without save in the menu
+    - Add number of flops filtered in the view "Open new file in the same folder"
+    - Added option to set CPU affinity of the solver process.
+    - Fix a bug in reports where zero hands would be shown
+    - improve some parts of layout to show better on high dpi scaling screens
+
+# 24.08.2021
+
+### PioViewer 2.0.7.4
+    - fixed a bug preventing jobs from being saved introcuded in 2.0.7.3
+
+# 24.8.2021
+
+### PioViewer 2.0.7.3
+    - fixed a bug with double selection when moving jobs up / down
+    - remember previously used accuracy when creating new job queue
+    - improve error messages / reporting of crashes
+    - improve behavior of chosing default action when opening a tree with a "board" selector
+    - minir tweaks to dard mode
+
+# 10.08.2021
+
+### PioViewer 2.0.7
+    - introduced dark mode to PioViewer
+    - fixed a problem which could cause PioViewer crashes sometimes
+    - added option to show high contrast colors in Compare Actions
+    - show children panel in Cloned view
+    - fixed a bug in flop expression parser (e.g. 222 expression was not parsed correctly)
+    - Allow setting different EV rescaling in Range Explorer
+    - fixed performance problem in Flop Selector
+    - fixed formatting of error messages
+    - fixed incorrect total EV shown in Range Explorer
+
+# 26.06.2021
+
+### PioViewer 2.0.6.9
+    - Fix a bug with Load Script menu option failing.
+    - Node Locking: Added new visualisation option showing only the difference between adjusted and original strategy.        
+    - Increase full precision in reports from G9 to G11
+
+# 09.06.2021
+
+### PioViewer 2.0.6.8
+    - Node Locking 2.0 has been improved:
+        - strategy change slider has now "intelligent" behavior
+            Increasing % of one action will add hands that are the best candidates for the action
+        - undo functionality added
+        - ability to select / unselect hands by clicking on the 13x13 matrix        
+    - Node locking interface 1.0 is back as a separate Menu Option.
+    - bet / raise colors can now be set with up to 10 different colors.
+
+    - Minor changes / bugfixes:
+        - fixed a bug where strategy+ev was not showing betsize in % when this configuration option was selected
+        - fixed a bug where generating subtree configuration wouldn't work if checkbox "change only betting structure" was checked.
+        - added information about board to the "Tree build OK!" information in the log text box
+        - fixed inconsistencies in which directory would Open/Save file dialogs open.
+
+### PioSolver 2.0.6
+    - rebuild_forgotten_streets - doesn't clear cache anymore.
+
+
+# 30.04.2021
+
+### PioViewer 2.0.5.4
+    - Ability to remove single hand from GTO Trainer
+    - minor stability fix
+
+# 27.03.2021
+
+### PioViewer 2.0.5.3
+    - fixed an issue with empty filename pattern when creating a new job.
+    - improved behavior in GTO Trainer when opening spot in a browser.
+
+# 21.4.2021
+
+### PioSolver 2.0.5
+    - edge version custom builds: reduce CPU requirements for old_cpu custom build and add ancientCPU custom build.
+    - fixed a bug affecting some ICM preflop cases
+
+### PioViewer 2.0.5.1
+- Trainer has been partially rebuild. This is breaking change.
+    - !! packs created with 2.0.4 and earlier will not work anymore. They will be moved to the Archive directory on the first run.
+    - remove 'one file' / many file pack distinction. It's now possible to have any number of different files in the pack.
+    - remove feature of HH export (might be restored in the future)
+    - play one street (so now it's play 1 action, 1 street or full hand)
+    - option to open this spot in another pio instance (global setting)
+    - open this spot directly from the table
+    - improved bahavior when selected dominated action (it's now possible to continue playing even if the hero range is 0 up until the small save cut-off)
+    - add RNG to the trainer (off by default - can be enabled in configuration)
+
+### PioViewer 2.0.5.2
+    - GTO Trainer: fix a bug where chips don't go to the winner
+
+
+# 19.04.2021
+
+### PioViewer 2.0.4.1:
+ - fix a bug that would cause crash when starting PioViewer sometimes.
+ - fix: default action after load tree now won't be triggered when using "open new file in the same folder" 
+    only if the action is "Open tree configuration"
+ - fixed problems with missing lines and wrong global frequency in the reports
+
+# 12.04.2021
+
+### PioSolver 2.0.4
+- upi change: added new optional arguments 'mem_ignore' and 'mem_pessimistic' to build_tree command 
+- fixed incorrect numbers in the not enough memory error message
+
+### PioViewer 2.0.4.0:
+- fixed a problem with jobs failing due to incorrect memory reporting by system.
+- fixed a bug which prevented disabling "running as admin" warning
+- fixed a bug when set_algorithm wasn't set for single postflop job
+- default action after load tree now won't be triggered when using "open new file in the same folder" 
+- most warnings are now always-on-top
+- fixed a bug when clicking "board" button would show sometimes show invalid error for postflop files
+
+# 30.03.2021
+
+### PioSolver 2.0.3
+ - added Winamax to auto-detected pokersites.
+ - fixed a crash when browsing small saves with auto-recalculation of rivers enabled
+ - small upi change: added effective stack info to show_metadata
+
+# 26.03.2021
+
+### PioViewer 2.0.1.10
+ - fix a problem when "Strategy and react" would sometimes show incorrect values
+
+### PioViewer 2.0.1.9
+ - enhanced grid output of "Show all Frequencies" to be more user and export friendly
+ - made small improvements to aggregation reports action EV display
+ - fixed a crash when clicking empty space in range selector
+ - fixed option to hide single hand frequency 
+ - fixed some rare crashes
+
+## 24.03.2021
+
+### PioViewer 2.0.1.8
+ - fixed selecting a proper flop from flop list
+ 
+## 23.03.2021
+
+### PioViewer 2.0.1.7
+ - added loading flop subset from file in Job Generation
+ - fixed "use double-click to close window when selecting a flop"
+ - fixed crash when trying to create a GTO Trainer pack with an invalid save file
+
+## 22.03.2021
+
+### PioSolver 2.0.2
+ - fixed a problem with high memory usage when loading several trees (mostly affecting aggregation reports)
+
+### PioViewer 2.0.1.6
+ - added 'set_algorithm' when creating old-style script
+ - added copy/paste to node locking
+ - fixed a problem where jobs would crash for trees with high stacks.
+ - fixed crash when changing suit after opening hand from GTO Trainer in the browser.
+ - fixed a crash in GTO Trainer which showed when opening and closing windows many times.
+
+## 19.03.2021 
+
+### PioViewer 2.0.1.5:
+ - fixed performance problem with building trees within jobs
+ - remove algorithm selection control from preflop (as it doesn't work for preflop)
+ - fixed a bug in keyboard selection manager
+ - fixed a crash caused when previously loaded file was on non-existing disk
+ - minor: change default order and size of columns in Job Queue
+
+## 18.03.2021
+
+### PioViewer 2.0.1.1:
+ - use double-click to close window when selecting a flop
+ - changed default recalc timeout to 60s
+ - improved performance of window resizing
+    
+### pioSOLVER 2.0.1: 
+ - fixed slow tree building when rake/icm were used
+ - Node-locking preflop now works
+ - Crashes/nonsense results when browsing small saves on rivers are fixed
+
+### PioUpdater 2.5.6: 
+- minor bugfixes. Improve list of products.

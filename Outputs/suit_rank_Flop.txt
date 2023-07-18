@@ -1,0 +1,6 @@
+1:Nine
+1:Hearts
+2:Three
+2:Spades
+3:Nine
+3:Spades
